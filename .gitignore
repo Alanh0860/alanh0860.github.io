@@ -1,0 +1,15 @@
+# Build tooling and local-only assets — not needed for the deployed static site
+node_modules/
+package-lock.json
+
+# High-res originals (kept locally; only optimized assets/img/ is published)
+source-photos/
+
+# Local preview/optimization scratch
+tools/previews/
+tools/shots/
+.claude/
+
+# OS cruft
+Thumbs.db
+.DS_Store
