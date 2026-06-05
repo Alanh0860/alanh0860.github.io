@@ -295,6 +295,7 @@ figure:hover .frame img { transform: scale(1.04); }
 .ledger__label { font-size: var(--t-md); font-weight: 400; color: var(--ink); letter-spacing: -0.005em; }
 .ledger__dots { align-self: center; height: 1px; background-image: radial-gradient(circle, var(--line) 1px, transparent 1.4px); background-size: 8px 2px; background-position: left center; background-repeat: repeat-x; opacity: 0.9; }
 .ledger__num { font-family: var(--serif); display: inline-flex; align-items: baseline; gap: 0.2em; color: var(--ink); }
+.ledger__num--tight { gap: 0; }
 .ledger__value { font-size: var(--t-xl); font-weight: 500; letter-spacing: -0.01em; font-variant-numeric: tabular-nums; }
 .ledger__unit { font-size: var(--t-base); font-weight: 400; font-style: italic; color: var(--accent); }
 .ledger__note { width: min(100%, var(--maxw)); margin: clamp(1.4rem, 1rem + 1.4vw, 2.2rem) auto 0; padding-inline: var(--gutter); font-family: var(--serif); font-style: italic; font-size: var(--t-base); color: var(--faint); }
