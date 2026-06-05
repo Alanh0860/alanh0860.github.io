@@ -4,232 +4,324 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Alan</title>
-  <meta name="description" content="Alan — running, climbing, skydiving, travel, baking, and photography. Two sides of the same person: going far out, and making things at home." />
-  <meta name="theme-color" content="#f3efe7" />
+  <meta name="description" content="Hello, my name is Alan. Skydiving, climbing, marathons and travel on one side; cooking, baking, and feeding friends on the other." />
+  <meta name="theme-color" content="#211a14" />
+  <meta name="color-scheme" content="dark" />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Alan" />
-  <meta property="og:description" content="Running, climbing, skydiving, travel, baking, and photography." />
-  <meta property="og:image" content="assets/img/climbing-redrock.jpg" />
+  <meta property="og:description" content="Hello, my name is Alan. Let me introduce myself." />
+  <meta property="og:image" content="assets/img/cliff-jumping.jpg" />
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23221c16'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' fill='%23f3efe7' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23211a14'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' fill='%23f0b46a' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E" />
 
-  <script>document.documentElement.classList.add('js');</script>
   <link rel="preload" href="assets/fonts/spectral-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/spectral-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="assets/fonts/hanken-grotesk-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" as="image" href="assets/img/photography.webp" type="image/webp" imagesrcset="assets/img/photography-sm.webp 1100w, assets/img/photography.webp 2200w" imagesizes="100vw" fetchpriority="high" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <a class="skip-link" href="#intro">Skip to content</a>
+  <div class="grain" aria-hidden="true"></div>
+  <a class="skip-link" href="#intro">Skip to introduction</a>
 
   <header class="site-header" data-header>
-    <a class="wordmark" href="#top">Alan</a>
+    <a class="brand" href="#top" aria-label="Alan — back to top">
+      <span class="brand__mark">A</span>
+      <span class="brand__word">Alan</span>
+    </a>
     <nav class="site-nav" aria-label="Sections">
-      <a href="#horizons">Horizons</a>
-      <a href="#hands">Hands</a>
+      <a href="#logbook">Logbook</a>
+      <a href="#table">The Table</a>
+      <a href="#horizons">Explorations</a>
+      <a href="#connect" class="site-nav__cta">Say hello</a>
     </nav>
   </header>
 
   <main id="top">
 
-    <!-- INTRO -->
-    <section class="intro" id="intro">
-      <p class="intro__name reveal">Alan</p>
-      <p class="intro__lead reveal">
-        Outside, I push how far, high, and fast I can go.
-        The rest of the time I am baking or behind a camera.
-      </p>
+    <!-- ============================ HERO ============================ -->
+    <section class="hero" data-hero aria-labelledby="hero-greeting">
+      <div class="hero__media" data-iris>
+        <picture>
+          <source type="image/webp" srcset="assets/img/photography-sm.webp 1100w, assets/img/photography.webp 2200w" sizes="100vw" />
+          <img src="assets/img/photography.jpg" width="2200" height="1467" fetchpriority="high" decoding="async"
+               alt="Alan framed in a round, riveted metal porthole, lifting a camera to his eye to take this self-portrait." />
+        </picture>
+      </div>
+      <div class="hero__scrim" aria-hidden="true"></div>
+
+      <div class="hero__inner">
+        <h1 class="hero__greeting" id="hero-greeting">
+          <span class="hero__line reveal" data-reveal="rise">Hello, my name is</span>
+          <span class="hero__name reveal" data-reveal="rise">Alan.</span>
+        </h1>
+        <p class="hero__sub reveal" data-reveal="rise">Let me introduce myself.</p>
+      </div>
+
+      <a class="hero__cue" href="#intro" aria-label="Scroll to introduction">
+        <span class="hero__cue-text">Scroll</span>
+        <span class="hero__cue-line" aria-hidden="true"></span>
+      </a>
+      <span class="hero__credit" aria-hidden="true">@ashaqpics</span>
     </section>
 
-    <!-- HORIZONS -->
-    <section class="block" id="horizons">
-      <header class="block__head reveal">
-        <h2 class="block__title">Horizons</h2>
-        <p class="block__sub">Running, climbing, skydiving, and travel.</p>
+    <!-- ============================ THESIS ============================ -->
+    <section class="thesis" id="intro">
+      <div class="thesis__inner">
+        <p class="thesis__lead reveal" data-reveal="rise">I&rsquo;m usually doing one of two things: <em>exploring</em>, or <em>food</em>.</p>
+        <div class="thesis__col reveal" data-reveal="rise">
+          <p class="thesis__body">I explore my limits. I explore the earth. I explore experiences.</p>
+          <p class="thesis__body">With food, I&rsquo;m making it, cooking it, baking it, sharing it, experiencing it with friends.</p>
+        </div>
+      </div>
+      <div class="topo reveal" data-reveal="topo" aria-hidden="true">
+        <svg viewBox="0 0 1200 80" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="topo__path" d="M0 64 C 150 64 180 20 320 20 S 520 64 660 60 S 900 14 1060 24 S 1180 56 1200 52" />
+          <path class="topo__path topo__path--2" d="M0 44 C 170 44 220 70 360 70 S 560 30 700 36 S 940 72 1090 62 S 1190 38 1200 40" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- ============================ LOGBOOK ============================ -->
+    <section class="logbook" id="logbook" aria-labelledby="logbook-title">
+      <header class="section-head reveal" data-reveal="rise">
+        <h2 class="section-head__title" id="logbook-title">The logbook</h2>
+        <p class="section-head__sub">A rough count.</p>
       </header>
 
-      <div class="grid">
+      <!-- EDIT ME: these figures are tasteful placeholders. Swap data-count / unit for Alan's real numbers. -->
+      <ol class="ledger" role="list">
+        <li class="ledger__row reveal" data-reveal="ledger" style="--i:0">
+          <span class="ledger__label">Countries visited</span>
+          <span class="ledger__dots" aria-hidden="true"></span>
+          <span class="ledger__num"><span class="ledger__value" data-count="23">23</span></span>
+        </li>
+        <li class="ledger__row reveal" data-reveal="ledger" style="--i:1">
+          <span class="ledger__label">Dinner parties thrown</span>
+          <span class="ledger__dots" aria-hidden="true"></span>
+          <span class="ledger__num"><span class="ledger__value" data-count="12">12</span></span>
+        </li>
+        <li class="ledger__row reveal" data-reveal="ledger" style="--i:2">
+          <span class="ledger__label">Things pulled from my oven</span>
+          <span class="ledger__dots" aria-hidden="true"></span>
+          <span class="ledger__num"><span class="ledger__value" data-count="76">76</span></span>
+        </li>
+        <li class="ledger__row reveal" data-reveal="ledger" style="--i:3">
+          <span class="ledger__label">Races finished</span>
+          <span class="ledger__dots" aria-hidden="true"></span>
+          <span class="ledger__num"><span class="ledger__value" data-count="5">5</span></span>
+        </li>
+        <li class="ledger__row reveal" data-reveal="ledger" style="--i:4">
+          <span class="ledger__label">Highest free fall</span>
+          <span class="ledger__dots" aria-hidden="true"></span>
+          <span class="ledger__num"><span class="ledger__value" data-count="13500">13,500</span><span class="ledger__unit">ft</span></span>
+        </li>
+        <li class="ledger__row reveal" data-reveal="ledger" style="--i:5">
+          <span class="ledger__label">My second marathon</span>
+          <span class="ledger__dots" aria-hidden="true"></span>
+          <span class="ledger__num"><span class="ledger__value" data-count="26.2" data-decimals="1">26.2</span><span class="ledger__unit">mi</span></span>
+        </li>
+      </ol>
+    </section>
 
-        <figure class="tile tile--feature reveal">
-          <div class="tile__media">
+    <!-- ============================ THE TABLE ============================ -->
+    <section class="table" id="table" aria-labelledby="table-title">
+      <div class="table__glow" aria-hidden="true"></div>
+      <div class="table__wrap">
+        <header class="section-head section-head--warm reveal" data-reveal="rise">
+          <h2 class="section-head__title" id="table-title">The table</h2>
+          <p class="section-head__sub">Cooking, baking, and having people over.</p>
+        </header>
+
+        <div class="table__grid">
+          <figure class="table__main reveal" data-reveal="reveal-up">
+            <div class="frame frame--tall">
+              <picture>
+                <source type="image/webp" srcset="assets/img/dinner-party-sm.webp 825w, assets/img/dinner-party.webp 1418w" sizes="(min-width: 960px) 46vw, 100vw" />
+                <img src="assets/img/dinner-party.jpg" width="1418" height="1890" loading="lazy" decoding="async"
+                     alt="A long wooden table shot from above, set for friends: a sliced roast, mac and cheese, two salads, rice, a red enamel pot, and a full ring of white plates." />
+              </picture>
+            </div>
+            <figcaption class="frame__cap"><span>New Year&rsquo;s celebration</span></figcaption>
+          </figure>
+
+          <div class="table__aside">
+            <p class="table__copy reveal" data-reveal="rise">
+              I like having people over, and food is the easiest reason to. I&rsquo;ll cook all
+              afternoon, bake more than we need, and drag every chair I own up to one long table.
+            </p>
+
+            <figure class="table__bake reveal" data-reveal="reveal-up">
+              <div class="frame frame--wide">
+                <picture>
+                  <source type="image/webp" srcset="assets/img/baking-sm.webp 1100w, assets/img/baking.webp 2200w" sizes="(min-width: 960px) 46vw, 100vw" />
+                  <img src="assets/img/baking.jpg" width="2200" height="1350" loading="lazy" decoding="async"
+                       alt="A tray of bright lemon bars on parchment, freshly cut into a neat grid, lit warm against dark wood." />
+                </picture>
+              </div>
+              <figcaption class="frame__cap"><span>Lemon bars</span></figcaption>
+            </figure>
+
+            <blockquote class="table__quote reveal" data-reveal="rise">
+              <p>&ldquo;There is no such thing as too much food.&rdquo;</p>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ HORIZONS ============================ -->
+    <section class="horizons" id="horizons" aria-labelledby="horizons-title">
+      <header class="section-head reveal" data-reveal="rise">
+        <h2 class="section-head__title" id="horizons-title">Explorations</h2>
+        <p class="section-head__sub">Testing my limits. Seeing the world.</p>
+      </header>
+
+      <div class="gallery">
+
+        <figure class="shot shot--feature reveal" data-reveal="reveal-up">
+          <div class="frame frame--feature" data-parallax>
             <picture>
-              <source type="image/webp" srcset="assets/img/skydiving-sm.webp 1100w, assets/img/skydiving.webp 2200w" sizes="100vw" />
-              <img src="assets/img/skydiving.jpg" width="3780" height="2835" loading="lazy" decoding="async"
-                   alt="A tandem skydiver in free fall above green farmland, the horizon curving against deep blue sky" />
+              <source type="image/webp" srcset="assets/img/skydiving-sm.webp 1100w, assets/img/skydiving.webp 2200w" sizes="(min-width: 1100px) 1240px, 100vw" />
+              <img src="assets/img/skydiving.jpg" width="2200" height="1650" loading="lazy" decoding="async"
+                   alt="Alan in tandem free fall, arms wide, the green farmland below curving away into a hazy blue horizon." />
             </picture>
           </div>
-          <figcaption class="tile__cap">
-            <span class="tile__label">Skydiving</span>
-            <span class="tile__meta">13,500 ft</span>
-          </figcaption>
+          <figcaption class="frame__cap"><span class="frame__label">Skydiving</span><span class="frame__meta">13,500 ft</span></figcaption>
         </figure>
 
-        <figure class="tile tile--wide reveal">
-          <div class="tile__media">
-            <picture>
-              <source type="image/webp" srcset="assets/img/climbing-redrock-sm.webp 1100w, assets/img/climbing-redrock.webp 2200w" sizes="(min-width:980px) 50vw, 100vw" />
-              <img src="assets/img/climbing-redrock.jpg" width="2835" height="1890" loading="lazy" decoding="async"
-                   alt="A climber high in the gap of a split red sandstone boulder, desert stretching behind" />
-            </picture>
-          </div>
-          <figcaption class="tile__cap">
-            <span class="tile__label">Red Rock, Nevada</span>
-            <span class="tile__meta">Climbing</span>
-          </figcaption>
-        </figure>
+        <div class="gallery__masonry">
 
-        <figure class="tile tile--wide reveal">
-          <div class="tile__media">
+        <figure class="shot shot--tall reveal" data-reveal="reveal-up">
+          <div class="frame frame--portrait">
             <picture>
-              <source type="image/webp" srcset="assets/img/travel-sm.webp 1100w, assets/img/travel.webp 2049w" sizes="(min-width:980px) 50vw, 100vw" />
-              <img src="assets/img/travel.jpg" width="2049" height="1536" loading="lazy" decoding="async"
-                   alt="Alan sitting on a chalk cliff above a calm turquoise sea, white cliffs curving into the distance" />
-            </picture>
-          </div>
-          <figcaption class="tile__cap">
-            <span class="tile__label">Étretat, France</span>
-            <span class="tile__meta">Travel</span>
-          </figcaption>
-        </figure>
-
-        <figure class="tile reveal">
-          <div class="tile__media">
-            <picture>
-              <source type="image/webp" srcset="assets/img/philly-marathon-sm.webp 734w, assets/img/philly-marathon.webp 1261w" sizes="(min-width:980px) 33vw, 50vw" />
-              <img src="assets/img/philly-marathon.jpg" width="1261" height="1890" loading="lazy" decoding="async"
-                   alt="Alan running mid-race in a black shirt and bib, autumn trees behind the course" />
-            </picture>
-          </div>
-          <figcaption class="tile__cap">
-            <span class="tile__label">Philadelphia Marathon</span>
-            <span class="tile__meta">26.2 miles</span>
-          </figcaption>
-        </figure>
-
-        <figure class="tile reveal">
-          <div class="tile__media">
-            <picture>
-              <source type="image/webp" srcset="assets/img/triathlon-sm.webp 1100w, assets/img/triathlon.webp 2048w" sizes="(min-width:980px) 33vw, 50vw" />
-              <img src="assets/img/triathlon.jpg" width="2048" height="1152" loading="lazy" decoding="async"
-                   alt="Alan at a lakeside finish line holding a medal, smiling under an overcast sky" />
-            </picture>
-          </div>
-          <figcaption class="tile__cap">
-            <span class="tile__label">Triathlon</span>
-            <span class="tile__meta">Swim, bike, run</span>
-          </figcaption>
-        </figure>
-
-        <figure class="tile reveal">
-          <div class="tile__media">
-            <picture>
-              <source type="image/webp" srcset="assets/img/cliff-jumping-sm.webp 942w, assets/img/cliff-jumping.webp 1057w" sizes="(min-width:980px) 33vw, 50vw" />
+              <source type="image/webp" srcset="assets/img/cliff-jumping-sm.webp 942w, assets/img/cliff-jumping.webp 1057w" sizes="(min-width: 760px) 38vw, 100vw" />
               <img src="assets/img/cliff-jumping.jpg" width="1057" height="1234" loading="lazy" decoding="async"
-                   alt="Silhouettes on a headland at dusk, one person leaping toward the sea beneath a lit torch" />
+                   alt="Silhouettes on a black headland at dusk beside a lit torch, one figure already leaping toward a still pastel sea." />
             </picture>
           </div>
-          <figcaption class="tile__cap">
-            <span class="tile__label">Cliff jumping</span>
-            <span class="tile__meta">Maui</span>
-          </figcaption>
+          <figcaption class="frame__cap"><span class="frame__label">Cliff jumping</span><span class="frame__meta">Maui</span></figcaption>
         </figure>
+
+        <figure class="shot shot--wide reveal" data-reveal="reveal-up">
+          <div class="frame frame--landscape">
+            <picture>
+              <source type="image/webp" srcset="assets/img/travel-sm.webp 1100w, assets/img/travel.webp 2049w" sizes="(min-width: 760px) 56vw, 100vw" />
+              <img src="assets/img/travel.jpg" width="2049" height="1536" loading="lazy" decoding="async"
+                   alt="Alan sitting at the edge of a chalk cliff above a turquoise sea, the white cliffs of Etretat curving into the distance." />
+            </picture>
+          </div>
+          <figcaption class="frame__cap"><span class="frame__label">&Eacute;tretat, France</span><span class="frame__meta">the chalk cliffs</span></figcaption>
+        </figure>
+
+        <figure class="shot reveal" data-reveal="reveal-up">
+          <div class="frame frame--landscape">
+            <picture>
+              <source type="image/webp" srcset="assets/img/climbing-redrock-sm.webp 1100w, assets/img/climbing-redrock.webp 2200w" sizes="(min-width: 760px) 38vw, 100vw" />
+              <img src="assets/img/climbing-redrock.jpg" width="2200" height="1467" loading="lazy" decoding="async"
+                   alt="Alan wedged high in the gap of a giant red sandstone boulder split clean in two, desert stretching out behind." />
+            </picture>
+          </div>
+          <figcaption class="frame__cap"><span class="frame__label">Red Rock, Nevada</span><span class="frame__meta">a boulder split in two</span></figcaption>
+        </figure>
+
+        <figure class="shot shot--portrait reveal" data-reveal="reveal-up">
+          <div class="frame frame--portrait">
+            <picture>
+              <source type="image/webp" srcset="assets/img/philly-marathon-sm.webp 734w, assets/img/philly-marathon.webp 1261w" sizes="(min-width: 760px) 30vw, 50vw" />
+              <img src="assets/img/philly-marathon.jpg" width="1261" height="1890" loading="lazy" decoding="async"
+                   alt="Alan running mid-race in a black shirt, bib reading ALAN 11309, autumn trees and RUN banners behind him." />
+            </picture>
+          </div>
+          <figcaption class="frame__cap"><span class="frame__label">Philadelphia Marathon</span><span class="frame__meta">26.2 miles</span></figcaption>
+        </figure>
+
+        <figure class="shot shot--wide reveal" data-reveal="reveal-up">
+          <div class="frame frame--landscape">
+            <picture>
+              <source type="image/webp" srcset="assets/img/triathlon-sm.webp 1100w, assets/img/triathlon.webp 2048w" sizes="(min-width: 760px) 46vw, 100vw" />
+              <img src="assets/img/triathlon.jpg" width="2048" height="1152" loading="lazy" decoding="async"
+                   alt="Alan at a lakeside finish, medal around his neck and a thumbs up, race bib 1176 on his chest under a grey sky." />
+            </picture>
+          </div>
+          <figcaption class="frame__cap"><span class="frame__label">Sprint triathlon</span><span class="frame__meta">swim &middot; bike &middot; run</span></figcaption>
+        </figure>
+
+        <figure class="shot reveal" data-reveal="reveal-up">
+          <div class="frame frame--landscape">
+            <picture>
+              <source type="image/webp" srcset="assets/img/gokart-sm.webp 1100w, assets/img/gokart.webp 2200w" sizes="(min-width: 760px) 38vw, 100vw" />
+              <img src="assets/img/gokart.jpg" width="2200" height="1653" loading="lazy" decoding="async"
+                   alt="Alan and a friend in full racing helmets at a go-kart track, geared up and grinning before a run." />
+            </picture>
+          </div>
+          <figcaption class="frame__cap"><span class="frame__label">Track day</span><span class="frame__meta">racing</span></figcaption>
+        </figure>
+
+        </div>
 
       </div>
 
-      <!-- Bouldering sequence: three frames of one move -->
-      <figure class="trip reveal">
-        <div class="trip__row">
-          <div class="trip__frame">
+      <!-- Bouldering: one move, three frames, revealed left to right -->
+      <figure class="triptych reveal" data-reveal="triptych" aria-label="A bouldering move in three frames, left to right">
+        <div class="triptych__row">
+          <div class="triptych__frame" style="--i:0">
             <picture>
-              <source type="image/webp" srcset="assets/img/climbing1-sm.webp 733w, assets/img/climbing1.webp 1466w" sizes="(min-width:720px) 31vw, 90vw" />
-              <img src="assets/img/climbing1.jpg" width="4005" height="6007" loading="lazy" decoding="async" alt="Alan starting a bouldering move, reaching for the first hold on a grey forest rock" />
+              <source type="image/webp" srcset="assets/img/climbing1-sm.webp 733w, assets/img/climbing1.webp 1467w" sizes="(min-width: 720px) 31vw, 90vw" />
+              <img src="assets/img/climbing1.jpg" width="1467" height="2200" loading="lazy" decoding="async" alt="Frame one: Alan sets his hands on the first holds under an overhanging grey boulder, spotters waiting." />
             </picture>
           </div>
-          <div class="trip__frame">
+          <div class="triptych__frame" style="--i:1">
             <picture>
-              <source type="image/webp" srcset="assets/img/climbing2-sm.webp 733w, assets/img/climbing2.webp 1466w" sizes="(min-width:720px) 31vw, 90vw" />
-              <img src="assets/img/climbing2.jpg" width="4063" height="6095" loading="lazy" decoding="async" alt="Alan mid-move, body tensed and high-stepping onto the wall" />
+              <source type="image/webp" srcset="assets/img/climbing2-sm.webp 733w, assets/img/climbing2.webp 1467w" sizes="(min-width: 720px) 31vw, 90vw" />
+              <img src="assets/img/climbing2.jpg" width="1467" height="2200" loading="lazy" decoding="async" alt="Frame two: Alan pulls in tight to the rock, body tensed, high-stepping onto the wall." />
             </picture>
           </div>
-          <div class="trip__frame">
+          <div class="triptych__frame" style="--i:2">
             <picture>
-              <source type="image/webp" srcset="assets/img/climbing3-sm.webp 733w, assets/img/climbing3.webp 1466w" sizes="(min-width:720px) 31vw, 90vw" />
-              <img src="assets/img/climbing3.jpg" width="4060" height="6090" loading="lazy" decoding="async" alt="Alan reaching the top hold, completing the move with spotters watching" />
+              <source type="image/webp" srcset="assets/img/climbing3-sm.webp 733w, assets/img/climbing3.webp 1467w" sizes="(min-width: 720px) 31vw, 90vw" />
+              <img src="assets/img/climbing3.jpg" width="1467" height="2200" loading="lazy" decoding="async" alt="Frame three: Alan reaches the top of the move, committed and stretched to the finishing hold." />
             </picture>
           </div>
         </div>
-        <figcaption class="tile__cap">
-          <span class="tile__label">Bouldering</span>
-          <span class="tile__meta">One move, three frames</span>
-        </figcaption>
+        <figcaption class="frame__cap"><span class="frame__label">Bouldering</span><span class="frame__meta">Leapfrog V7 &middot; Lincoln Woods</span></figcaption>
       </figure>
-    </section>
-
-    <!-- HANDS -->
-    <section class="block" id="hands">
-      <header class="block__head reveal">
-        <h2 class="block__title">Hands</h2>
-        <p class="block__sub">Baking, cooking, and photographs.</p>
-      </header>
-
-      <div class="grid">
-
-        <figure class="tile reveal">
-          <div class="tile__media">
-            <picture>
-              <source type="image/webp" srcset="assets/img/baking-sm.webp 1100w, assets/img/baking.webp 2200w" sizes="(min-width:980px) 33vw, 50vw" />
-              <img src="assets/img/baking.jpg" width="5979" height="3668" loading="lazy" decoding="async"
-                   alt="A neat grid of bright yellow lemon bars on parchment, cut and ready, on a dark wood table" />
-            </picture>
-          </div>
-          <figcaption class="tile__cap">
-            <span class="tile__label">Lemon bars</span>
-            <span class="tile__meta"><a href="https://instagram.com/alansbakedgoods" target="_blank" rel="noopener">@alansbakedgoods</a></span>
-          </figcaption>
-        </figure>
-
-        <figure class="tile reveal">
-          <div class="tile__media">
-            <picture>
-              <source type="image/webp" srcset="assets/img/dinner-party-sm.webp 825w, assets/img/dinner-party.webp 1418w" sizes="(min-width:980px) 25vw, 50vw" />
-              <img src="assets/img/dinner-party.jpg" width="1418" height="1890" loading="lazy" decoding="async"
-                   alt="An overhead view of a long wooden table set for friends, with roast, salads, rice and a red pot" />
-            </picture>
-          </div>
-          <figcaption class="tile__cap">
-            <span class="tile__label">Dinner for friends</span>
-            <span class="tile__meta">At home</span>
-          </figcaption>
-        </figure>
-
-        <figure class="tile reveal">
-          <div class="tile__media">
-            <picture>
-              <source type="image/webp" srcset="assets/img/photography-sm.webp 1100w, assets/img/photography.webp 2200w" sizes="(min-width:980px) 33vw, 50vw" />
-              <img src="assets/img/photography.jpg" width="2835" height="1890" loading="lazy" decoding="async"
-                   alt="Alan reflected through a circular metal frame, raising a camera to his eye" />
-            </picture>
-          </div>
-          <figcaption class="tile__cap">
-            <span class="tile__label">Photography</span>
-            <span class="tile__meta"><a href="https://instagram.com/ashaqpics" target="_blank" rel="noopener">@ashaqpics</a></span>
-          </figcaption>
-        </figure>
-
-      </div>
     </section>
 
   </main>
 
+  <!-- ============================ CONNECT ============================ -->
   <footer class="connect" id="connect">
     <div class="connect__inner">
-      <p class="connect__lead">Find me on Instagram.</p>
-      <ul class="connect__links">
-        <li><a href="https://instagram.com/ashaqpics" target="_blank" rel="noopener"><span>Photography</span><span class="connect__handle">@ashaqpics</span></a></li>
-        <li><a href="https://instagram.com/climberxclimber" target="_blank" rel="noopener"><span>Climbing</span><span class="connect__handle">@climberxclimber</span></a></li>
-        <li><a href="https://instagram.com/alansbakedgoods" target="_blank" rel="noopener"><span>Baking</span><span class="connect__handle">@alansbakedgoods</span></a></li>
+      <p class="connect__lead reveal" data-reveal="rise">That&rsquo;s me.<br />Come say hello.</p>
+      <ul class="connect__links reveal" data-reveal="rise">
+        <li>
+          <a href="https://instagram.com/ashaqpics" target="_blank" rel="noopener">
+            <span class="connect__what">Photography</span>
+            <span class="connect__handle">@ashaqpics</span>
+            <span class="connect__arrow" aria-hidden="true">&#8599;</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://instagram.com/climberxclimber" target="_blank" rel="noopener">
+            <span class="connect__what">Climbing</span>
+            <span class="connect__handle">@climberxclimber</span>
+            <span class="connect__arrow" aria-hidden="true">&#8599;</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://instagram.com/alansbakedgoods" target="_blank" rel="noopener">
+            <span class="connect__what">Baking</span>
+            <span class="connect__handle">@alansbakedgoods</span>
+            <span class="connect__arrow" aria-hidden="true">&#8599;</span>
+          </a>
+        </li>
       </ul>
-      <p class="connect__colophon"><span>Alan</span><span data-year>2026</span></p>
+      <p class="connect__colophon">
+        <span class="connect__sign">Alan</span>
+        <span class="connect__made"><span data-year>2026</span></span>
+      </p>
     </div>
   </footer>
 
