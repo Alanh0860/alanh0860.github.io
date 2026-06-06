@@ -48,7 +48,7 @@ await shootFull('desktop', 1440, 900);
 await shootFull('mobile', 390, 844);
 await shootSections(1440, 900, [
   ['.hero', 'hero'], ['#intro', 'thesis'], ['#logbook', 'logbook'],
-  ['#table', 'table'], ['#horizons', 'horizons'], ['#connect', 'connect'],
+  ['#table', 'table'], ['#horizons', 'horizons'], ['#building', 'building'], ['#connect', 'connect'],
 ]);
 await browser.close();
 console.log('done');

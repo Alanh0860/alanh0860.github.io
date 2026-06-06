@@ -209,7 +209,7 @@ ol, ul { list-style: none; padding: 0; }
 @keyframes cueRun { 0% { transform: translateY(-100%); } 60%, 100% { transform: translateY(100%); } }
 
 /* Anchor jumps shouldn't hide section titles under the sticky header */
-:where(#intro, #logbook, #table, #horizons, #connect) { scroll-margin-top: clamp(4rem, 3rem + 2vw, 5.5rem); }
+:where(#intro, #logbook, #table, #horizons, #building, #connect) { scroll-margin-top: clamp(4rem, 3rem + 2vw, 5.5rem); }
 
 /* ===================================================================
    SHARED — section heads, frames, captions
@@ -354,6 +354,55 @@ figure:hover .frame img { transform: scale(1.04); }
 .triptych__frame { position: relative; overflow: clip; aspect-ratio: 2 / 3; background: var(--bg-2); border-radius: var(--radius); border: 1px solid oklch(1 0 0 / 0.05); }
 .triptych__frame img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.85s var(--ease-out-expo); }
 .triptych:hover .triptych__frame img { transform: scale(1.03); }
+
+/* ===================================================================
+   BUILDING (Jeweler Studio)
+   =================================================================== */
+.studio { position: relative; isolation: isolate; padding: clamp(3rem, 2rem + 4vw, 6rem) 0 clamp(3rem, 2rem + 4vw, 6rem); }
+.studio__glow {
+  position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: radial-gradient(58% 50% at 26% 32%, oklch(0.55 0.14 64 / 0.28), transparent 60%),
+              radial-gradient(54% 60% at 84% 80%, oklch(0.45 0.13 42 / 0.20), transparent 62%);
+}
+.studio__wrap { width: min(100%, var(--maxw)); margin-inline: auto; }
+.studio__showcase {
+  display: grid; grid-template-columns: minmax(0, 0.92fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 1rem + 3vw, 4rem); align-items: center; padding-inline: var(--gutter);
+}
+.studio__hero { margin: 0; }
+.studio__ring { position: relative; display: grid; place-items: center; }
+.studio__ring::before {
+  content: ""; position: absolute; top: 50%; left: 50%; translate: -50% -50%;
+  width: 84%; aspect-ratio: 1; border-radius: 50%;
+  background: radial-gradient(circle, oklch(0.80 0.15 66 / 0.30), transparent 64%);
+}
+.studio__ring img { width: min(100%, 440px); height: auto; filter: drop-shadow(0 24px 48px oklch(0.08 0.01 60 / 0.6)); }
+.studio__cap { margin-top: 1rem; font-family: var(--serif); font-style: italic; font-size: var(--t-base); color: var(--muted); text-align: center; }
+.studio__aside { display: flex; flex-direction: column; align-items: flex-start; gap: clamp(1.2rem, 0.8rem + 1.5vw, 1.8rem); }
+.studio__brand { display: inline-flex; align-items: center; gap: 0.6rem; }
+.studio__brand img { width: 2em; height: 2em; }
+.studio__brand span { font-family: var(--serif); font-size: var(--t-md); color: var(--ink); letter-spacing: 0.01em; }
+.studio__copy { font-size: var(--t-md); font-weight: 300; line-height: 1.5; color: var(--muted); max-width: 46ch; }
+.studio__copy + .studio__copy { margin-top: 0.85em; }
+.studio__cta {
+  display: inline-flex; align-items: center; gap: 0.55rem;
+  background: var(--accent); color: var(--on-accent); font-weight: 600; font-size: var(--t-sm);
+  padding: 0.85rem 1.5rem; border-radius: 100px;
+  box-shadow: 0 8px 24px oklch(0.77 0.15 64 / 0.18);
+  transition: background 0.3s var(--ease-out-quart), transform 0.3s var(--ease-out-expo), box-shadow 0.3s;
+}
+.studio__cta:hover { background: oklch(0.82 0.15 66); transform: translateY(-2px); box-shadow: 0 12px 30px oklch(0.77 0.15 64 / 0.28); }
+.studio__cta-arrow { font-size: 1.05em; transition: transform 0.3s var(--ease-out-expo); }
+.studio__cta:hover .studio__cta-arrow { transform: translate(2px, -2px); }
+.studio__gallery { margin: clamp(2.2rem, 1.4rem + 3vw, 3.6rem) 0 0; padding-inline: var(--gutter); }
+.studio__cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(0.8rem, 0.5rem + 1.4vw, 1.6rem); }
+.studio__card { border-radius: 14px; overflow: clip; background: #fff; border: 1px solid oklch(1 0 0 / 0.08); box-shadow: 0 14px 36px oklch(0.08 0.01 60 / 0.45); }
+.studio__card img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; transition: transform 0.7s var(--ease-out-expo); }
+.studio__card:hover img { transform: scale(1.04); }
+@media (max-width: 820px) {
+  .studio__showcase { grid-template-columns: 1fr; }
+  .studio__ring img { width: min(70%, 340px); }
+}
 
 /* ===================================================================
    CONNECT
